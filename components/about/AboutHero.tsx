@@ -6,12 +6,12 @@ import { motion, useInView } from "framer-motion"
 
 export default function AboutHero() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.1 })
+  const isInView = useInView(ref, { once: true})
 
   return (
     <section className="relative pt-20 pb-16 overflow-hidden bg-gradient-primary">
       <div className="absolute inset-0 z-0 opacity-20">
-        <Image src="/images/about/about-pattern.jpg" alt="Background Pattern" fill className="object-cover" />
+        <Image src="/course/bgofpda.webp" alt="Background Pattern" fill className="object-cover" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4">
@@ -53,7 +53,7 @@ export default function AboutHero() {
           >
             <div className="relative rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/about/about-hero.jpg"
+                src="/assets/AboutHkm.webp"
                 alt="Harikrishna Multimedia Institute"
                 width={600}
                 height={400}

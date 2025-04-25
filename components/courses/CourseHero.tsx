@@ -17,7 +17,7 @@ export function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section ref={ref} className="relative w-full min-h-screen overflow-hidden">
+    <section ref={ref} className="relative w-full min-h-screen overflow-hidden bg-gray-100 dark:bg-gray-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/80 to-black opacity-90" />
@@ -62,24 +62,24 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl"
         >
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Unleash Your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#113F6C] to-[#e9414d]">
               Creative Potential
             </span>
           </h1>
-          <p className="mt-6 text-xl text-gray-300 md:text-2xl">
+          <p className="mt-6 text-xl text-gray-700 dark:text-gray-300 md:text-2xl">
             Discover world-class courses designed to transform your passion into a profession
           </p>
           <div className="flex flex-col items-center justify-center gap-4 mt-10 sm:flex-row">
             <Button
               size="lg"
-              className="text-lg bg-gradient-to-r from-primary to-accent hover:from-primary hover:to-accent hover:opacity-90"
+              className="text-lg bg-gradient-to-r from-[#113F6C] to-[#e9414d] hover:from-[#113F6C] hover:to-[#e9414d] hover:opacity-90"
               asChild
             >
               <Link href="#courses">Explore Courses</Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg text-white border-white hover:bg-white/10" asChild>
+            <Button size="lg" variant="outline" className="text-lg text-gray-900 dark:text-white border-gray-900 dark:border-white hover:bg-gray-900/10 dark:hover:bg-white/10" asChild>
               <Link href="/about">About Us</Link>
             </Button>
           </div>
@@ -94,10 +94,10 @@ export function HeroSection() {
         transition={{ duration: 1, delay: 1.5, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
       >
         <div className="flex flex-col items-center">
-          <span className="text-white text-sm mb-2">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
+          <span className="text-gray-900 dark:text-white text-sm mb-2">Scroll to explore</span>
+          <div className="w-6 h-10 border-2 border-gray-900 dark:border-white rounded-full flex justify-center p-1">
             <motion.div
-              className="w-1 h-2 bg-white rounded-full"
+              className="w-1 h-2 bg-gray-900 dark:bg-white rounded-full"
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             />
@@ -107,4 +107,3 @@ export function HeroSection() {
     </section>
   )
 }
-

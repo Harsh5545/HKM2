@@ -240,7 +240,7 @@ export default function Navbar() {
                 </div>
               ))}
               <div className="pt-2 flex">
-                <Button onClick={toggleTheme} className="w-full">
+                <Button onClick={toggleTheme} className="bg-transparent w-full">
                   {theme === 'light' ? (
                     <motion.div initial={{ opacity: 0, rotate: -90 }} animate={{ opacity: 1, rotate: 0 }} transition={{ duration: 0.5 }}>
                       <MoonIcon className={scrolled ? "text-gray-700 dark:text-gray-200" : "text-white"} />
